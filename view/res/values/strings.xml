@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">view</string>
+    <string name="zoom">缩放</string>
+    <string name="turn">转角</string>
+    <string name="edge">边数</string>
+    <string name="inputEdge">请输入边数</string>
+    <string name="color">颜色</string>
+    <string name="picture">图片</string>
+    <string name="sure">确定</string>
+</resources>

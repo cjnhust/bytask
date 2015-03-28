@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyView">
+        <attr name="edgeColor" format="color"></attr>
+        <attr name="pictureStrokeWidth" format="float"></attr>
+        <attr name="textSrokeWidth" format="float"></attr>
+
+    </declare-styleable>
+</resources>

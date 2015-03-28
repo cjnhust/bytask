@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res/com.example.view"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:weightSum="1"
+    android:background="#e0f2f1"
+
+                 >
+
+    <RelativeLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="249dp">
+
+        <EditText
+            android:hint="@string/zoom"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/zoom"
+            android:gravity="center"
+            android:layout_gravity="right"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            />
+
+        <com.example.view.MyView
+            android:layout_width="400dp"
+            app:edgeColor="#ffffff"
+            app:pictureStrokeWidth="15"
+            android:id="@+id/myView"
+            android:layout_height="180dp"
+            android:layout_alignParentTop="true"
+            android:layout_above="@+id/revolve"
+            android:layout_toStartOf="@+id/zoom"
+            android:layout_alignEnd="@+id/zoom"
+            />
+
+        <EditText
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/revolve"
+            android:layout_gravity="right"
+            android:hint="@string/turn"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edge"
+            android:textSize="22sp"
+            android:id="@+id/textView"/>
+
+
+    <EditText
+            android:hint="@string/inputEdge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edge"
+        android:gravity="center"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="278dp">
+
+        <ToggleButton
+            android:background="@drawable/shape"
+            android:textSize="18sp"
+                android:textOn="@string/color"
+                android:textOff="@string/picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New ToggleButton"
+                android:id="@+id/toggleButton" />
+
+        <ImageView
+            android:background="#ffffff"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/imageView"
+            android:layout_gravity="right"
+            android:scaleType="fitXY"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/toggleButton"
+            android:layout_alignBottom="@+id/setbutton" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="生成"
+            android:textSize="18sp"
+            android:background="@drawable/shape"
+            android:id="@+id/setbutton"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="70dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>
+
