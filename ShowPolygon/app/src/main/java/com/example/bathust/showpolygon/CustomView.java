@@ -57,10 +57,7 @@ public class CustomView extends View {
 
 
         if(step == 0) {
-            Bitmap fitBitmap = Bitmap.createScaledBitmap(bitmap,canvasWidth,canvasHeight,true);
-            BitmapShader bitmapShader = new BitmapShader(fitBitmap, Shader.TileMode.REPEAT,
-                    Shader.TileMode.REPEAT);
-            paintPicture.setShader(bitmapShader);
+          setBitmapShader(canvasWidth,canvasHeight,bitmap,paintPicture);
 
         }
         if(step == 1) {
@@ -79,6 +76,13 @@ public class CustomView extends View {
         translateY=event.getY();
         invalidate();
         return true;
+    }
+
+    private void setBitmapShader (int width, int height , Bitmap bitmap, Paint paint) {
+        Bitmap fitBitmap = Bitmap.createScaledBitmap(bitmap,width,height,true);
+        BitmapShader bitmapShader = new BitmapShader(fitBitmap, Shader.TileMode.REPEAT,
+                Shader.TileMode.REPEAT);
+        paint.setShader(bitmapShader);
     }
 
     public void setPaintColor(int clR, int clG, int clB) {
@@ -105,6 +109,7 @@ public class CustomView extends View {
     public void setBitmap(String savePath) {
         this.bitmap = BitmapFactory.decodeFile(savePath).copy(Bitmap.Config.ARGB_8888,true);
     }
+
     private void drawPicture(Canvas canvas, int edgeNum, float canvasWidth, float canvasHeight)
     {
         float edgeLong = Math.min(canvasHeight, canvasWidth);
@@ -113,8 +118,7 @@ public class CustomView extends View {
             case 1:break;
             case 2:break;
             case 4:
-               // canvas.scale(scale,scale,canvasWidth/2,canvasHeight/2);
-                //canvas.rotate(degree,canvasWidth/2,canvasHeight/2);
+
                 canvas.drawRect(canvasWidth/2-edgeLong/4, edgeLong/4, canvasWidth/2+edgeLong/4, 3*edgeLong/4, paintPicture);
                 break;
             case 3:
@@ -128,8 +132,7 @@ public class CustomView extends View {
                 path.lineTo(3*edgeLong/4, (float) triangleHeight);
                 path.close();
                 canvas.drawPath(path, paintPicture);
-                canvas.scale(scale,scale);
-                canvas.rotate(degree,canvasWidth/2,canvasHeight/2);
+
                 break;
             default:
                 canvas.drawCircle(canvasWidth / 2, canvasHeight / 2, edgeLong / 4, paintPicture);
