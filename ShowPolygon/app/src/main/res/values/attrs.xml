@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomView">
+        <attr name="edgeColor" format="color"></attr>
+        <attr name="strokeWidth" format="float"></attr>
+        <attr name="edgeNumber" format="integer"></attr>
+    </declare-styleable>
+
+</resources>

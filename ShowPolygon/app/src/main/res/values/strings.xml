@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Show Polygon</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="create">生成</string>
+    <string name="degree">转角</string>
+    <string name="color">颜色</string>
+    <string name="picture">图片</string>
+    <string name="edgeRequire">请输入边数</string>
+    <string name="title_activity_select">DialogActivity</string>
+    <string name="sure">确定</string>
+    <string name="scale">比例</string>
+    <string name="edge_input">请输入边数</string>
+    <string name="selectText">点击右侧选择</string>
+</resources>
